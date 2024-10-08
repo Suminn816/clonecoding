@@ -6,7 +6,9 @@ class ChatApp:
     """Chat 애플리케이션 클래스는 사용자의 입력과 대화 흐름을 관리한다."""
     
     def __init__(self, model: ChatModel, history: ChatHistory):
-        self.model = model
+        if 'model' not in st.session_state:
+            st.session_state.model = model
+        self.mode = st.session_state.model
         self.history = history
     
     def display_chat(self):
@@ -29,5 +31,5 @@ class ChatApp:
             
             # 응답을 화면에 표시
             with st.chat_message("assistant"):
-                st.write(response)
+                respose = st.write_stream()
 
