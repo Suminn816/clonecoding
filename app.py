@@ -1,7 +1,7 @@
 import streamlit as st
 from langchain_aws.chat_models import ChatBedrock
 
-st.title("ChatGPT-like clone")
+st.title("ChatGPT-클론 코딩")
 EMBEDDING_MODEL_ID = 'amazon.titan-embed-text-v2:0'
 CLAUDE_HAIKU_ID = 'anthropic.claude-3-haiku-20240307-v1:0'
 CLAUDE_SONNET_ID = 'anthropic.claude-3-5-sonnet-20240620-v1:0'
